@@ -1,0 +1,238 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>CSS coding styleguide | UX Guidelines</title>
+  <meta name="author" content="Felix Menard">
+  
+  <meta name="description" content="Principles of writing consistent, idiomatic CSSThe following document outlines a reasonable style guide for CSS development.These guidelines strongly ">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="CSS coding styleguide"/>
+  <meta property="og:site_name" content="UX Guidelines"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="UX Guidelines" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">UX Guidelines</a></h1>
+  <h2><a href="/">Toronto Star User Experience Guidelines</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-05-01T18:51:28.000Z"><a href="/coding/css/">2015-05-01</a></time>
+      
+      
+  
+    <h1 class="title">CSS coding styleguide</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h1 id="Principles_of_writing_consistent,_idiomatic_CSS">Principles of writing consistent, idiomatic CSS</h1><p>The following document outlines a reasonable style guide for CSS development.<br>These guidelines strongly encourage the use of existing, common, sensible<br>patterns. They should be adapted as needed to create your own style guide.</p>
+<p>This is a living document and new ideas are always welcome. Please<br>contribute.</p>
+<p>Source: <a href="https://github.com/necolas/idiomatic-css" target="_blank" rel="external">https://github.com/necolas/idiomatic-css</a></p>
+<h2 id="Table_of_contents">Table of contents</h2><ol>
+<li><a href="#general-principles">General principles</a></li>
+<li><a href="#whitespace">Whitespace</a></li>
+<li><a href="#comments">Comments</a></li>
+<li><a href="#format">Format</a></li>
+<li><a href="#example">Practical example</a></li>
+</ol>
+<p><a href="#acknowledgements">Acknowledgements</a></p>
+<p><a href="#license">License</a></p>
+<p><a name="general-principles"></a></p>
+<h2 id="1-_General_principles">1. General principles</h2><blockquote>
+<p>“Part of being a good steward to a successful project is realizing that<br>writing code for yourself is a Bad Idea™. If thousands of people are using<br>your code, then write your code for maximum clarity, not your personal<br>preference of how to get clever within the spec.” - Idan Gazit</p>
+</blockquote>
+<ul>
+<li>Don’t try to prematurely optimize your code; keep it readable and<br>understandable.</li>
+<li>All code in any code-base should look like a single person typed it, even<br>when many people are contributing to it.</li>
+<li>Strictly enforce the agreed-upon style.</li>
+<li>If in doubt when deciding upon a style use existing, common patterns.</li>
+</ul>
+<p><a name="whitespace"></a></p>
+<h2 id="2-_Whitespace">2. Whitespace</h2><p>Only one style should exist across the entire source of your code-base. Always<br>be consistent in your use of whitespace. Use whitespace to improve<br>readability.</p>
+<ul>
+<li><em>Never</em> mix spaces and tabs for indentation.</li>
+<li>Choose between soft indents (spaces) or real tabs. Stick to your choice<br>without fail. (Preference: spaces)</li>
+<li>If using spaces, choose the number of characters used per indentation level.<br>(Preference: 4 spaces)</li>
+</ul>
+<p>Tip: configure your editor to “show invisibles” or to automatically remove<br>end-of-line whitespace.</p>
+<p>Tip: use an <a href="http://editorconfig.org/" target="_blank" rel="external">EditorConfig</a> file (or equivalent) to<br>help maintain the basic whitespace conventions that have been agreed for your<br>code-base.</p>
+<p><a name="comments"></a></p>
+<h2 id="3-_Comments">3. Comments</h2><p>Well commented code is extremely important. Take time to describe components,<br>how they work, their limitations, and the way they are constructed. Don’t leave<br>others in the team guessing as to the purpose of uncommon or non-obvious<br>code.</p>
+<p>Comment style should be simple and consistent within a single code base.</p>
+<ul>
+<li>Place comments on a new line above their subject.</li>
+<li>Keep line-length to a sensible maximum, e.g., 80 columns.</li>
+<li>Make liberal use of comments to break CSS code into discrete sections.</li>
+<li>Use “sentence case” comments and consistent text indentation.</li>
+</ul>
+<p>Tip: configure your editor to provide you with shortcuts to output agreed-upon<br>comment patterns.</p>
+<p>Example:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* ==========================================================================</span><br><span class="line">   Section comment block</span><br><span class="line">   ========================================================================== */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* Sub-section comment block</span><br><span class="line">   ========================================================================== */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * Short description using Doxygen-style comment format</span><br><span class="line"> *</span><br><span class="line"> * The first sentence of the long description starts here and continues on this</span><br><span class="line"> * line for a while finally concluding here at the end of this paragraph.</span><br><span class="line"> *</span><br><span class="line"> * The long description is ideal for more detailed explanations and</span><br><span class="line"> * documentation. It can include example HTML, URLs, or any other information</span><br><span class="line"> * that is deemed necessary or useful.</span><br><span class="line"> *</span><br><span class="line"> * @tag This is a tag named 'tag'</span><br><span class="line"> *</span><br><span class="line"> * TODO: This is a todo statement that describes an atomic task to be completed</span><br><span class="line"> *   at a later date. It wraps after 80 characters and following lines are</span><br><span class="line"> *   indented by 2 spaces.</span><br><span class="line"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* Basic comment */</span></span><br></pre></td></tr></table></figure>
+<p><a name="format"></a></p>
+<h2 id="4-_Format">4. Format</h2><p>The chosen code format must ensure that code is: easy to read; easy to clearly<br>comment; minimizes the chance of accidentally introducing errors; and results<br>in useful diffs and blames.</p>
+<ul>
+<li>Use one discrete selector per line in multi-selector rulesets.</li>
+<li>Include a single space before the opening brace of a ruleset.</li>
+<li>Include one declaration per line in a declaration block.</li>
+<li>Use one level of indentation for each declaration.</li>
+<li>Include a single space after the colon of a declaration.</li>
+<li>Use lowercase and shorthand hex values, e.g., <code>#aaa</code>.</li>
+<li>Use single or double quotes consistently. Preference is for double quotes,<br>e.g., <code>content: &quot;&quot;</code>.</li>
+<li>Quote attribute values in selectors, e.g., <code>input[type=&quot;checkbox&quot;]</code>.</li>
+<li><em>Where allowed</em>, avoid specifying units for zero-values, e.g., <code>margin: 0</code>.</li>
+<li>Include a space after each comma in comma-separated property or function<br>values.</li>
+<li>Include a semi-colon at the end of the last declaration in a declaration<br>block.</li>
+<li>Place the closing brace of a ruleset in the same column as the first<br>character of the ruleset.</li>
+<li>Separate each ruleset by a blank line.</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.selector-1</span>,</span><br><span class="line"><span class="class">.selector-2</span>,</span><br><span class="line"><span class="class">.selector-3</span><span class="attr_selector">[type="text"]</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">-webkit-box-sizing</span>:<span class="value"> border-box</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">-moz-box-sizing</span>:<span class="value"> border-box</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">box-sizing</span>:<span class="value"> border-box</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">font-family</span>:<span class="value"> helvetica, arial, sans-serif</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#333</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#fff</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="function">linear-gradient</span>(<span class="hexcolor">#fff</span>, <span class="function">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.8</span>))</span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="class">.selector-a</span>,</span><br><span class="line"><span class="class">.selector-b</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">10px</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<h4 id="Declaration_order">Declaration order</h4><p>If declarations are to be consistently ordered, it should be in accordance with<br>a single, simple principle.</p>
+<p>Smaller teams may prefer to cluster related properties (e.g. positioning and<br>box-model) together.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.selector</span> <span class="rules">&#123;</span><br><span class="line">    <span class="comment">/* Positioning */</span></span><br><span class="line">    <span class="rule"><span class="attribute">position</span>:<span class="value"> absolute</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">z-index</span>:<span class="value"> <span class="number">10</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">top</span>:<span class="value"> <span class="number">0</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">right</span>:<span class="value"> <span class="number">0</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">bottom</span>:<span class="value"> <span class="number">0</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">left</span>:<span class="value"> <span class="number">0</span></span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* Display &amp; Box Model */</span></span><br><span class="line">    <span class="rule"><span class="attribute">display</span>:<span class="value"> inline-block</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">overflow</span>:<span class="value"> hidden</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">box-sizing</span>:<span class="value"> border-box</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">100px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">10px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">10px</span> solid <span class="hexcolor">#333</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">10px</span></span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* Other */</span></span><br><span class="line">    <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#000</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#fff</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">font-family</span>:<span class="value"> sans-serif</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">16px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">text-align</span>:<span class="value"> right</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>Larger teams may prefer the simplicity and ease-of-maintenance that comes with<br>alphabetical ordering.</p>
+<h4 id="Exceptions_and_slight_deviations">Exceptions and slight deviations</h4><p>Large blocks of single declarations can use a slightly different, single-line<br>format. In this case, a space should be included after the opening brace and<br>before the closing brace.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.selector-1</span> <span class="rules">&#123; <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">10%</span></span></span>; &#125;</span></span><br><span class="line"><span class="class">.selector-2</span> <span class="rules">&#123; <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">20%</span></span></span>; &#125;</span></span><br><span class="line"><span class="class">.selector-3</span> <span class="rules">&#123; <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">30%</span></span></span>; &#125;</span></span><br></pre></td></tr></table></figure>
+<p>Long, comma-separated property values - such as collections of gradients or<br>shadows - can be arranged across multiple lines in an effort to improve<br>readability and produce more useful diffs. There are various formats that could<br>be used; one example is shown below.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.selector</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">background-image</span>:<span class="value"></span><br><span class="line">        <span class="function">linear-gradient</span>(<span class="hexcolor">#fff</span>, <span class="hexcolor">#ccc</span>),</span><br><span class="line">        <span class="function">linear-gradient</span>(<span class="hexcolor">#f3c</span>, <span class="hexcolor">#4ec</span>)</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">box-shadow</span>:<span class="value"></span><br><span class="line">        <span class="number">1px</span> <span class="number">1px</span> <span class="number">1px</span> <span class="hexcolor">#000</span>,</span><br><span class="line">        <span class="number">2px</span> <span class="number">2px</span> <span class="number">1px</span> <span class="number">1px</span> <span class="hexcolor">#ccc</span> inset</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="Preprocessors:_additional_format_considerations">Preprocessors: additional format considerations</h3><p>Different CSS preprocessors have different features, functionality, and syntax.<br>Your conventions should be extended to accommodate the particularities of any<br>preprocessor in use. The following guidelines are in reference to Sass.</p>
+<ul>
+<li>Limit nesting to 1 level deep. Reassess any nesting more than 2 levels deep.<br>This prevents overly-specific CSS selectors.</li>
+<li>Avoid large numbers of nested rules. Break them up when readability starts to<br>be affected. Preference to avoid nesting that spreads over more than 20<br>lines.</li>
+<li>Always place <code>@extend</code> statements on the first lines of a declaration<br>block.</li>
+<li>Where possible, group <code>@include</code> statements at the top of a declaration<br>block, after any <code>@extend</code> statements.</li>
+<li>Consider prefixing custom functions with <code>x-</code> or another namespace. This<br>helps to avoid any potential to confuse your function with a native CSS<br>function, or to clash with functions from libraries.</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.selector-1</span> &#123;</span><br><span class="line">    <span class="at_rule">@<span class="keyword">extend</span><span class="preprocessor"> .other-rule</span>;</span></span><br><span class="line">    <span class="at_rule">@<span class="keyword">include</span><span class="preprocessor"> clearfix</span>();</span></span><br><span class="line">    <span class="at_rule">@<span class="keyword">include</span><span class="preprocessor"> box-sizing</span>(border-box);</span></span><br><span class="line">    <span class="attribute">width</span><span class="value">: <span class="function">x-grid-unit</span>(<span class="number">1</span>);</span></span><br><span class="line">    <span class="comment">// other declarations</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><a name="example"></a></p>
+<h2 id="5-_Practical_example">5. Practical example</h2><p>An example of various conventions.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* ==========================================================================</span><br><span class="line">   Grid layout</span><br><span class="line">   ========================================================================== */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * Column layout with horizontal scroll.</span><br><span class="line"> *</span><br><span class="line"> * This creates a single row of full-height, non-wrapping columns that can</span><br><span class="line"> * be browsed horizontally within their parent.</span><br><span class="line"> *</span><br><span class="line"> * Example HTML:</span><br><span class="line"> *</span><br><span class="line"> * &lt;div class="grid"&gt;</span><br><span class="line"> *     &lt;div class="cell cell-3"&gt;&lt;/div&gt;</span><br><span class="line"> *     &lt;div class="cell cell-3"&gt;&lt;/div&gt;</span><br><span class="line"> *     &lt;div class="cell cell-3"&gt;&lt;/div&gt;</span><br><span class="line"> * &lt;/div&gt;</span><br><span class="line"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * Grid container</span><br><span class="line"> *</span><br><span class="line"> * Must only contain `.cell` children.</span><br><span class="line"> *</span><br><span class="line"> * 1. Remove inter-cell whitespace</span><br><span class="line"> * 2. Prevent inline-block cells wrapping</span><br><span class="line"> */</span></span><br><span class="line"></span><br><span class="line"><span class="class">.grid</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">100%</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">0</span></span></span>; <span class="comment">/* 1 */</span></span><br><span class="line">    <span class="rule"><span class="attribute">white-space</span>:<span class="value"> nowrap</span></span>; <span class="comment">/* 2 */</span></span><br><span class="line">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * Grid cells</span><br><span class="line"> *</span><br><span class="line"> * No explicit width by default. Extend with `.cell-n` classes.</span><br><span class="line"> *</span><br><span class="line"> * 1. Set the inter-cell spacing</span><br><span class="line"> * 2. Reset white-space inherited from `.grid`</span><br><span class="line"> * 3. Reset font-size inherited from `.grid`</span><br><span class="line"> */</span></span><br><span class="line"></span><br><span class="line"><span class="class">.cell</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">position</span>:<span class="value"> relative</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">display</span>:<span class="value"> inline-block</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">overflow</span>:<span class="value"> hidden</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">box-sizing</span>:<span class="value"> border-box</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">100%</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">0</span> <span class="number">10px</span></span></span>; <span class="comment">/* 1 */</span></span><br><span class="line">    <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">2px</span> solid <span class="hexcolor">#333</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">vertical-align</span>:<span class="value"> top</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">white-space</span>:<span class="value"> normal</span></span>; <span class="comment">/* 2 */</span></span><br><span class="line">    <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">16px</span></span></span>; <span class="comment">/* 3 */</span></span><br><span class="line">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* Cell states */</span></span><br><span class="line"></span><br><span class="line"><span class="class">.cell</span><span class="class">.is-animating</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">background-color</span>:<span class="value"> <span class="hexcolor">#fffdec</span></span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* Cell dimensions</span><br><span class="line">   ========================================================================== */</span></span><br><span class="line"></span><br><span class="line"><span class="class">.cell-1</span> <span class="rules">&#123; <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">10%</span></span></span>; &#125;</span></span><br><span class="line"><span class="class">.cell-2</span> <span class="rules">&#123; <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">20%</span></span></span>; &#125;</span></span><br><span class="line"><span class="class">.cell-3</span> <span class="rules">&#123; <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">30%</span></span></span>; &#125;</span></span><br><span class="line"><span class="class">.cell-4</span> <span class="rules">&#123; <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">40%</span></span></span>; &#125;</span></span><br><span class="line"><span class="class">.cell-5</span> <span class="rules">&#123; <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">50%</span></span></span>; &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* Cell modifiers</span><br><span class="line">   ========================================================================== */</span></span><br><span class="line"></span><br><span class="line"><span class="class">.cell--detail</span>,</span><br><span class="line"><span class="class">.cell--important</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">border-width</span>:<span class="value"> <span class="number">4px</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<p><a name="acknowledgements"></a></p>
+<h2 id="Acknowledgements">Acknowledgements</h2><p>Thanks to everyone who has provided translations and to all those who<br>contributed to <a href="https://github.com/rwldrn/idiomatic.js" target="_blank" rel="external">idiomatic.js</a>. It was a<br>source of inspiration, quotations, and guidelines.</p>
+<p><a name="license"></a></p>
+<h2 id="License">License</h2><p><em>Principles of writing consistent, idiomatic CSS</em> by Nicolas Gallagher is<br>licensed under the <a href="http://creativecommons.org/licenses/by/3.0/" target="_blank" rel="external">Creative Commons Attribution 3.0 Unported<br>License</a>. This applies to all<br>documents and translations in this repository.</p>
+<p>Based on a work at<br><a href="https://github.com/necolas/idiomatic-css" target="_blank" rel="external">github.com/necolas/idiomatic-css</a>.</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+        
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">留言</h1>
+
+  
+      <div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123456789012345";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="fb-comments" data-href="http://yoursite.com/coding/css/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+      
+  
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜尋">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2015 Felix Menard
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>
