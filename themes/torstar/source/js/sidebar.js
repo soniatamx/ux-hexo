@@ -1,6 +1,6 @@
 $('#sidebar').stickySidebar({
 
-    sidebarTopMargin: 20,
+    sidebarTopMargin: 10,
     footerThreshold: 100
 
 });

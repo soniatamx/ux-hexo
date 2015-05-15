@@ -8,7 +8,7 @@
 // Cache selectors
 var lastId,
     sidebar = $("#sidebar"),
-    sidebarHeight = sidebar.outerHeight()+15,
+    sidebarHeight = sidebar.outerHeight()+0,
     // All list items
     menuItems = sidebar.find("a"),
     // Anchors corresponding to menu items
@@ -21,7 +21,7 @@ var lastId,
 // so we can get a fancy scroll animation
 menuItems.click(function(e){
   var href = $(this).attr("href"),
-      offsetTop = href === "#" ? 0 : $(href).offset().top+10;
+      offsetTop = href === "#" ? 0 : $(href).offset().top-50;
   $('html, body').stop().animate({ 
       scrollTop: offsetTop
   }, 500);
